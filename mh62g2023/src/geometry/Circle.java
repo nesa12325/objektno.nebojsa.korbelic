@@ -2,8 +2,8 @@ package geometry;
 
 public class Circle {
 
-	private Point center;
-	private int radius;
+	protected Point center;
+	protected int radius;
 	private boolean selected;
 	
 	public double area(){

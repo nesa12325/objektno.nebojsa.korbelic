@@ -42,4 +42,18 @@ public class Point {
 		
 	}
 	
+	public double distance(Point p) {
+		int dx = x - p.getX();
+		int dx = y - p.getY();
+		System.out.println(dx);
+		System.out.println(dy);
+		return Math.sqrt(dx*dx + dy*dy);
+	}
+	
+	public boolean contains(int x, int y) {
+		return
+		
+	}
+	
+	
 }

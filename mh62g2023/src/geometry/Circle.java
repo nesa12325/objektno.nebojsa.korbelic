@@ -1,11 +1,10 @@
 package geometry;
 
-public class Circle {
+public class Circle extends Shape{
 
 	protected Point center;
 	protected int radius;
-	private boolean selected;
-	
+
 	public double area(){
 		return radius*radius*Math.PI;
 	}
@@ -14,6 +13,17 @@ public class Circle {
 		return 2*radius*Math.PI;	
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		center.moveTo(x, y);
+		
+	}
+	
+	@Override
+	public void moveBy(int x, int y) {
+		center.moveBy(byX, byY);
+		
+	}
 
 	public int getRadius() {
 		return radius;
@@ -31,14 +41,7 @@ public class Circle {
 		this.center = center;
 	}
 
-	public boolean isSelected() {
-		return selected;
-	}
 
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
-	
 	
 	
 }

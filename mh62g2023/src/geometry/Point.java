@@ -1,11 +1,10 @@
 package geometry;
 
-public class Point {
+public class Point extends Shape{
 
 	
 	private int x;
 	private int y;
-	private boolean selected;
 	
 	
 	public double distance(Point p) {
@@ -24,9 +23,7 @@ public class Point {
 		return y;
 	}
 	
-	public boolean isSelected() {
-		return selected;
-	}
+
 	
 	public void setX(int x) {
 		this.x = x;
@@ -37,10 +34,7 @@ public class Point {
 		this.y = y;
 	}
 	
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-		
-	}
+
 	
 	public double distance(Point p) {
 		int dx = x - p.getX();

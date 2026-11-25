@@ -1,10 +1,9 @@
 package geometry;
 
-public class Rectangle {
+public class Rectangle extends Shape{
 	private Point upperLeft;
 	private int width;
 	private int height;
-	private boolean selected;
 	
 	
 	public double area() {
@@ -16,7 +15,17 @@ public class Rectangle {
 		
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		upperLeft.moveTo(x, y);
+		
+	}
 	
+	@Override
+	public void moveBy(int x, int y) {
+		upperLeft.moveBy(byX, byY);
+		
+	}
 	
 	
 	public Point getUpperLeft() {
@@ -37,11 +46,7 @@ public class Rectangle {
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	public boolean isSelected() {
-		return selected;
-	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
+
 	}
 
 
